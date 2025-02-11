@@ -1,0 +1,80 @@
+.menu-lateral{
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(189deg, #192431, #10203d,#142b46);
+    padding: 20px 0 40px 8px;
+    position: fixed;
+    z-index: 1000;
+    transition: 0.6s;
+    display: flex;
+    flex-direction:column;
+}
+
+
+
+.menu-lateral.show{
+    width: 280px;
+}
+
+.menu-lateral.show .logo-cgn{
+    opacity: 1;
+}
+
+.menu-lateral.show .txt-link{
+    opacity: 1;
+}
+.logo-cgn{
+    width: 100px;
+    display: flex;
+    margin-left: 5em;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.btn-expandir{
+    width: 100%;
+    
+    display: flex;
+    
+}
+
+.btn-expandir > i{
+    display: flex;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 4px;
+   
+    
+}
+
+.btn-expandir > i:hover{
+    color: rgba(255, 255, 255, 0.671);
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+.item-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 20px 5px;
+    display: flex;
+    margin-top: 10px;
+    line-height: 40px;
+    transition: 0.3s;
+}
+.icon > i:hover{
+    color: rgba(255, 255, 255, 0.671);
+}
+.txt-link{
+    margin-left: 40px;
+    opacity: 0;
+}
+
+.icon > i{
+    font-size: 18px;
+}

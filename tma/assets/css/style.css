@@ -1,0 +1,31 @@
+@import url("editmodal.css");
+@import url("header.css");
+@import url("menulateral.css");
+@import url("tabela.css");
+@import url("tmanew.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    height: 100vh;
+}
+
+#container{
+    display: flex;
+    margin-left: 50px;
+    flex-direction: column;
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.titulo-pagina > span > i{
+    margin-right: 1em;
+    font-size: 24px;
+    
+}

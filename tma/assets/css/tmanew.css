@@ -1,0 +1,37 @@
+.form-add{
+    display: flex;
+    align-items: center ;
+    
+    text-align: center;
+    gap: 3em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.titulo-pagina{
+    justify-content: left;
+}
+
+.form-box{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    flex-direction: column;
+    
+}
+
+.box-add-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-add input{
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    width: 300px;
+    height: 35px;
+    padding: 10px;
+}
