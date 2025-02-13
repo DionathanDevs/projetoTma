@@ -1,37 +1,111 @@
-.form-add{
+.form-box{
     display: flex;
-    align-items: center ;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
     
-    text-align: center;
-    gap: 3em;
+}
+
+.container-form{ 
+
+    position: relative;
+    max-width: 900px;
+    display: flex;
+    width: 100%;
+    border-radius: 6px;
+    padding: 0 10px;
+    margin: 0 15px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.form-datalog{
+    position: relative;
+    margin-top: 0px;
+    min-height: 490px;
+ 
+
+}
+
+.header-title{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px;
+    width: 230px;
+    color: #333;
+    margin-bottom: 1.5em;
+    border-bottom: 2px solid  #10203d80;
+   
+}
+
+
+.datalog-info{
+    margin-top: 10px;
+}
+
+.form-datalog .title{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.fields{
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
 }
 
-.titulo-pagina{
-    justify-content: left;
+.fields .input-field{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 15px);
 }
 
-.form-box{
-    
+.input-field label{
+    width: 150px;
+    font-size: 14px;
+    font-weight: 500;
+  
+    color: #2e2e2e;
+    background-color: white;
+}
+
+.input-field input{
+    outline: none;
+    border: 1px solid #aaa;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    height: 42px;
+    margin: 8px 0;
+    padding: 0 15px;
+}
+
+
+.saveBtn{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 45px;
+    max-width: 230px;
+    background: linear-gradient(189deg, #29394b, #253147,#24405e);
     width: 100%;
-    flex-direction: column;
-    
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin: 3em 0;
+    transition: all 0.3s linear;
+    cursor: pointer;
 }
 
-.box-add-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+.saveBtn:hover{
+    background-color: #2f517e;
 }
 
-.form-add input{
-    border: 1px solid rgba(0, 0, 0, 0.219);
-    width: 300px;
-    height: 35px;
-    padding: 10px;
-}

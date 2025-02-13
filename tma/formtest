@@ -1,77 +1,5 @@
-<?php
-
-require_once("./classes/TorreAnenometricaClass.php");
-
-$tmaClass = new TorreAnenometrica();
-$dataTma = $tmaClass->getAll();
-
-?>
-
-<?php echo isset($_GET['sucess']) ?  "<div class='alert_sucess'><p>Dados atualizados com sucesso!</p></div>" : "" ;?>
-
-
-
-<h2 class="titulo-pagina"><span><i class="bi bi-broadcast-pin"></i></span>TMA > DataLoggers</h2>
-
-<table>
-<div class="box-btn-add">
-    <a href="index.php?pg=new" class="btn-add">Adicionar  <i class="bi bi-plus-lg"></i></a>
-</div>    
-    <thead>
-        <tr>
-            <th>Torre</th>
-            <th>Numero DataLogger</th>
-            <th>Login</th>
-            <th>Senha</th>
-            <th>Ip</th>
-            <th>Mascára</th>
-            <th>Gateway</th>
-            <th>Porta SW</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        foreach ($dataTma as $item) {
-           ?>
-            <tr>
-                <td><?php echo $item['name']; ?></td>
-                <td><?php echo $item['datalog_number']; ?></td>
-                <td><?php echo $item['datalog_login']; ?></td>
-                <td><?php echo $item['datalog_password']; ?></td>
-                <td><?php echo $item['datalog_ip']; ?></td>
-                <td><?php echo $item['datalog_mask']; ?></td>
-                <td><?php echo $item['datalog_gateway']; ?></td>
-                <td><?php echo $item['rack_sw_port']; ?></td>
-                <td class="td-button">
-                    <button class="button-edit"
-                        data-id="<?php echo $item['id_tma']; ?>"
-                        data-name="<?php echo $item['name']; ?>"
-                        data-deviceid="<?php echo $item['datalog_deviceid']; ?>"
-                        data-datalog-number="<?php echo $item['datalog_number']; ?>"
-                        data-model="<?php echo $item['datalog_model']; ?>"
-                        data-software="<?php echo $item['datalog_software']; ?>"
-                        data-login="<?php echo $item['datalog_login']; ?>"
-                        data-password="<?php echo $item['datalog_password']; ?>"
-                        data-ip="<?php echo $item['datalog_ip']; ?>"
-                        data-mask="<?php echo $item['datalog_mask']; ?>"
-                        data-gateway="<?php echo $item['datalog_gateway']; ?>"
-                        data-rack-panel="<?php echo $item['rack_panel']; ?>"
-                        data-rack-sw="<?php echo $item['rack_sw']; ?>"
-                        data-rack-sw-port="<?php echo $item['rack_sw_port']; ?>">
-                        <i class="bi bi-pencil-square"></i> Editar
-                    </button>
-                </td>
-            </tr> <?php
-                }
-                    ?>
-
-
-    </tbody>
-</table>
-
 <div id="editModal" class="modal">
-    
+
     <div class="modal-content">
         <div class="modal-header">
         <h2 class="titulo-pagina"><span><i class="bi bi-broadcast-pin"></i></span>TMA > DataLoggers > Editando Dados</h2>
@@ -109,7 +37,7 @@ $dataTma = $tmaClass->getAll();
                     <label for="field7">Password</label>
                     <input type="text" id="field7" name="datalog_password" value="<?php echo $item['datalog_password']; ?>">
                 </div>
-
+            
                 <div class="box-edit-form">
                     <label for="field9">Gateway</label>
                     <input type="text" id="field9" name="datalog_ip" value="<?php echo $item['datalog_ip']; ?>">
@@ -139,8 +67,3 @@ $dataTma = $tmaClass->getAll();
                     <button class="btn-salvar" type="submit">Salvar</button>
                 </div>
             </form>
-        </div>
-    </div>
-</div>
-
-<script src="editmodal.js"></script>

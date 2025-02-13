@@ -1,7 +1,8 @@
 
 .titulo-pagina{
     margin: 1em;
-    font-weight: 400;
+    font-weight: 300;
+    color: #333;
 }
 
 .box-btn-add{
@@ -41,6 +42,14 @@ th, td {
     text-align: center;
     align-items: center;
     
+}
+
+th{
+    font-weight: 500;
+}
+
+td {
+    font-weight: 300;
 }
 tr:nth-child(even) {
     background-color: #f2f2f2;

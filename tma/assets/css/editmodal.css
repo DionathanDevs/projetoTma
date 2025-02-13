@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-
+    
 }
 
 .modal-content {
@@ -20,7 +20,12 @@
     height: 800px;
     display: flex;
     flex-direction: column;
+  
     
+}
+
+.modal-header .titulo-pagina{
+    color: white;
 }
 
 .modal-header h2{
@@ -32,14 +37,16 @@
     justify-content: space-between;
     display: flex;
     background-color: #264063;
+    align-items: center;
     padding: 1em;
     color: white;
+   
 }
 
 .close-button {
     justify-content: center;
     align-items: center;
-   
+    margin: 1em;
     font-size: 30px;
     cursor: pointer;
 }
@@ -49,20 +56,20 @@
 
 .box-form{
     display: flex;
-    justify-content: center;
+    justify-content: spa;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.473);
     
     gap: 6px;
 }
 .box-edit-form{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.342);
     width: 250px;
     height: 100px;
     align-items: center;
