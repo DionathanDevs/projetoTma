@@ -1,15 +1,11 @@
 <?php
 
 session_start();
-if($_SERVER["REQUEST_METHOD"] === "POST") {
-    if(isset($_POST['name']) && isset($_POST['datalog_ip']) && isset($_POST['id_tma'])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    
+    // Verifica imputs
+    if (isset($_POST['name']) && isset($_POST['datalog_ip'])) {
 
-        require_once("../config/conexao.php");
-        require_once("../classes/TorreAnenometricaClass.php");
-
-        $tmaClass = new TorreAnenometrica();
-
-        $idTma_input = addslashes($_POST['id_tma']);
         $name_input = addslashes($_POST['name']);
         $datalogDeviceId_input = addslashes($_POST['datalog_deviceid']);
         $datalogNumber_input = addslashes($_POST['datalog_number']);
@@ -24,21 +20,48 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         $rackSw_input = addslashes($_POST['rack_sw']);
         $rackSwPort_input = addslashes($_POST['rack_sw_port']);
 
-        $return = $tmaClass->update($idTma_input, $name_input, $datalogDeviceId_input, $datalogNumber_input, $datalogModel_input, $datalogSoftware_input, $datalogLogin_input, $datalogPassword_input,$datalogIp_input, $datalogMask_input, $datalogGateway_input, $rackPanel_input, $rackSw_input,$rackSwPort_input);
+    } else {
+        header("Location: ./../index.php?pg=tma&errorInput");
+    }
 
-        if($return == true){
+
+    
+    // Verificar qual a ação realizar (adicionar ou editar)
+    if (isset($_GET['add'])) { // Adicionar
+
+        require_once("../config/conexao.php");
+        require_once("../classes/TorreAnenometricaClass.php");
+        $tmaClass = new TorreAnenometrica();
+
+        
+
+        $return = $tmaClass->add($name_input, $datalogDeviceId_input, $datalogNumber_input, $datalogModel_input, $datalogSoftware_input, $datalogLogin_input, $datalogPassword_input, $datalogIp_input, $datalogMask_input, $datalogGateway_input, $rackPanel_input, $rackSw_input, $rackSwPort_input);
+
+        if ($return == true) {
             header("Location: ./../index.php?pg=tma&sucess");
-            
-        } else{
+        } else {
             header("Location: ./index.php?pg=tma?error");
-            
         }
 
-    } else{
+    } else if (isset($_GET['editar']) && isset($_POST['id_tma'])) { // Editar
+
+        require_once("../config/conexao.php");
+        require_once("../classes/TorreAnenometricaClass.php");
+        $tmaClass = new TorreAnenometrica();
         
-       header("Location: ./index.php?pg=tma?error");
+        $idTma_input = addslashes($_POST['id_tma']);
+
+        $return = $tmaClass->update($idTma_input, $name_input, $datalogDeviceId_input, $datalogNumber_input, $datalogModel_input, $datalogSoftware_input, $datalogLogin_input, $datalogPassword_input, $datalogIp_input, $datalogMask_input, $datalogGateway_input, $rackPanel_input, $rackSw_input, $rackSwPort_input);
+
+        if ($return == true) {
+            header("Location: ./../index.php?pg=tma&sucess");
+        } else {
+            header("Location: ./index.php?pg=tma?error");
+        }
+    } else {
+        header("Location: ./index.php?pg=tma?error");
     }
-} else{
-   
-   header("Location: ./index.php?pg=tma?error");
-} ?>
+
+} else {
+    header("Location: ./index.php?pg=tma?error");
+} 

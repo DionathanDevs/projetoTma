@@ -15,7 +15,7 @@ $dataTma = $tmaClass->getAll();
 
 <table>
 <div class="box-btn-add">
-    <a href="index.php?pg=new" class="btn-add">Adicionar  <i class="bi bi-plus-lg"></i></a>
+    <a href="index.php?pg=tma&action=new" class="btn-add">Adicionar  <i class="bi bi-plus-lg"></i></a>
 </div>    
     <thead>
         <tr>

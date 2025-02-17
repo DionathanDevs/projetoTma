@@ -1,3 +1,11 @@
+<?php 
+
+session_start();
+
+unset($_SESSION['idUser']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -28,9 +36,9 @@
                 <button type="submit" class="login-btn">Entrar</button>
                 <?php 
                 if(isset($_GET['error'])) { ?>
-                <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                <div class="alert-error">
                     <strong>Atenção!</strong> Preencha todos os campos.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    
                 </div><?php 
                 }
                 ?>

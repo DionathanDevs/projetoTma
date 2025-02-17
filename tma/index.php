@@ -1,10 +1,13 @@
+
 <?php 
-
-require_once("./config/conexao.php");
-
-?>
-
-
+session_start();
+if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
+    
+    require_once("./classes/UserClass.php");
+    require_once("./config/conexao.php");
+	
+    $userClass = new User();  
+    $dataUser = $userClass->getUser($_SESSION['idUser']); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +60,7 @@ require_once("./config/conexao.php");
             <div class="box-info-header">
                 <span><i class="bi bi-person"></i></span>
                 <span>Usuario</span>
-                <button>Sair</button>
+                <button><a href="./logout.php">Sair</a></button>
             </div>
          </nav>
          <main id="container">
@@ -75,9 +78,6 @@ require_once("./config/conexao.php");
                 require("page/tma.php");
                 break;
 
-                case 'new';
-                require("page/tma_new.php");
-                break;
                 
                 default: require("page/home.php");
             }
@@ -87,4 +87,7 @@ require_once("./config/conexao.php");
     <script src="menulateral.js"></script> 
     
 </body>
-</html>
+</html> 
+<?php }else{
+    header("Location: ./login.php");
+} ?>

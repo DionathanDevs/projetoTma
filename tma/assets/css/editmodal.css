@@ -43,6 +43,16 @@
    
 }
 
+.alert_sucess{
+    color: rgb(18, 158, 30);
+    background-color: rgba(57, 172, 29, 0.116);
+    border: 1px solid rgba(23, 165, 42, 0.356);
+    padding: 1em;
+    border-radius: 10px;
+    margin: 1em;
+    width: 300px;
+}
+
 .close-button {
     justify-content: center;
     align-items: center;
