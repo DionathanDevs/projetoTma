@@ -6,8 +6,8 @@ Este sistema foi desenvolvido para gerenciar informações de torres anenométri
 ## Tecnologias Utilizadas
 - PHP
 - MySQL
-- HTML/CSS (para a interface, se aplicável)
-- JavaScript (se houver interatividade no frontend)
+- HTML/CSS 
+- JavaScript
 
 ## Configuração do Banco de Dados
 Crie a tabela `tma` no MySQL com a seguinte estrutura:
