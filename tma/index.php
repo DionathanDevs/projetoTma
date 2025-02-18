@@ -50,6 +50,7 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
 
 
         </ul>
+        <!-- <a class ="logout-link" href="./logout.php">Sair</a> -->
         </nav>
         <!-- Header -->
          <nav class="menu-header">
@@ -59,7 +60,9 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
             <!-- Nome de Usuario e Opção para sair-->
             <div class="box-info-header">
                 <span><i class="bi bi-person"></i></span>
-                <span>Usuario</span>
+                <span><?php
+                echo $dataUser['name'];
+                 ?></span>
                 <button><a href="./logout.php">Sair</a></button>
             </div>
          </nav>

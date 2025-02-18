@@ -17,12 +17,12 @@ if(isset($_POST['login']) && !empty($_POST['login']) && isset($_POST['password']
         if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])){
             header("Location: ./index.php");
         }else{
-            header("Location: ./login.php?error");
+            header("Location: ./login.php?error2");
         }
     }else{
-        header("Location: ./login.php?error");
+        header("Location: ./login.php?error2");
     }
 
 }else {
-    header("Location: ./login.php?error");
+    header("Location: ./login.php?error1");
 } ?>

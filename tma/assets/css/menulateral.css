@@ -10,7 +10,21 @@
     flex-direction:column;
 }
 
+.logout-link{
+    opacity: 0;
+    display: none;
+}
 
+.menu-lateral.show .logout-link{
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+    align-items: center;
+    justify-content: right;
+  
+}
 
 .menu-lateral.show{
     width: 280px;

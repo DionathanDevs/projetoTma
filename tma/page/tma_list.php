@@ -78,66 +78,109 @@ $dataTma = $tmaClass->getAll();
             <span class="close-button">&times;</span>
         </div>
         <div class="box-form">
-            <form method="POST" action="./page/tma_salvar.php?editar">
+        <div class="container-form">
+        <form class="form-datalog" method="POST" action="./page/tma_salvar.php?editar">
 
-                <input type="hidden" id="field0" name="id_tma" value="<?php echo $item['id_tma']; ?>" class="input-info">
-                <div class="box-edit-form">
-                    <label for="field1">TMA</label>
-                    <input type="text" id="field1" name="name" value="<?php echo $item['name']; ?>" class="input-info">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field2">Device Id</label>
-                    <input type="text" id="field2" name="datalog_deviceid" value="<?php echo $item['datalog_deviceid']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field3">Número DataLogger</label>
-                    <input type="text" id="field3" name="datalog_number" value="<?php echo $item['datalog_number']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field4">Modelo</label>
-                    <input type="text" id="field4" name="datalog_model" value="<?php echo $item['datalog_model']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field5">Software</label>
-                    <input type="text" id="field5" name="datalog_software" value="<?php echo $item['datalog_software']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field6">Login</label>
-                    <input type="text" id="field6" name="datalog_login" value="<?php echo $item['datalog_login']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field7">Password</label>
-                    <input type="text" id="field7" name="datalog_password" value="<?php echo $item['datalog_password']; ?>">
-                </div>
+            <div class="form-first">
 
-                <div class="box-edit-form">
-                    <label for="field9">Gateway</label>
-                    <input type="text" id="field9" name="datalog_ip" value="<?php echo $item['datalog_ip']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field10">Máscara</label>
-                    <input type="text" id="field10" name="datalog_mask" value="<?php echo $item['datalog_mask']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field11">Gateway</label>
-                    <input type="text" id="field11" name="datalog_gateway" value="<?php echo $item['datalog_gateway']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field12">Rack Painel</label>
-                    <input type="text" id="field12" name="rack_panel" value="<?php echo $item['rack_panel']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field13">Rack SW</label>
-                    <input type="text" id="field13" name="rack_sw" value="<?php echo $item['rack_sw']; ?>">
-                </div>
-                <div class="box-edit-form">
-                    <label for="field14">Porta SW</label>
-                    <input type="text" id="field14" name="rack_sw_port" value="<?php echo $item['rack_sw_port']; ?>">
-                </div>
+                <div class="datalog-info">
 
-                <div class="box-btn-salvar">
-                    <button class="btn-salvar" type="submit">Salvar</button>
+                    <h3 class="header-title">Editando DataLogger</h3>
+
+
+                    <div class="fields">
+                    <input type="hidden" id="field0" name="id_tma" value="<?php echo $item['id_tma']; ?>" class="input-info">
+                        <div class="input-field">
+
+                        <label for="field1">TMA</label>
+                        <input type="text" id="field1" name="name" value="<?php echo $item['name']; ?>" class="input-info">
+
+                        </div>
+                        <div class="input-field">
+
+                            <label for="field2">Device Id</label>
+                            <input type="text" id="field2" name="datalog_deviceid" value="<?php echo $item['datalog_deviceid']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field3">Número DataLogger</label>
+                        <input type="text" id="field3" name="datalog_number" value="<?php echo $item['datalog_number']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field4">Modelo</label>
+                        <input type="text" id="field4" name="datalog_model" value="<?php echo $item['datalog_model']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field5">Software</label>
+                        <input type="text" id="field5" name="datalog_software" value="<?php echo $item['datalog_software']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field6">Login</label>
+                        <input type="text" id="field6" name="datalog_login" value="<?php echo $item['datalog_login']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field7">Password</label>
+                        <input type="text" id="field7" name="datalog_password" value="<?php echo $item['datalog_password']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field9">Gateway</label>
+                        <input type="text" id="field9" name="datalog_ip" value="<?php echo $item['datalog_ip']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field10">Máscara</label>
+                        <input type="text" id="field10" name="datalog_mask" value="<?php echo $item['datalog_mask']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field11">Gateway</label>
+                        <input type="text" id="field11" name="datalog_gateway" value="<?php echo $item['datalog_gateway']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field12">Rack Painel</label>
+                        <input type="text" id="field12" name="rack_panel" value="<?php echo $item['rack_panel']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field13">Rack SW</label>
+                        <input type="text" id="field13" name="rack_sw" value="<?php echo $item['rack_sw']; ?>">
+
+                        </div>
+                        <div class="input-field">
+
+                        <label for="field14">Porta SW</label>
+                        <input type="text" id="field14" name="rack_sw_port" value="<?php echo $item['rack_sw_port']; ?>">
+
+                        </div>
+
+                    </div>
+
+                    <div class="box-btn-salvar">
+                    <button class="btn-salvar" style="margin-top: 1em;" type="submit">Salvar</button>
+                    </div>
+
                 </div>
+            </div>
+        </form>
+    </div>
+           
+                
             </form>
         </div>
     </div>

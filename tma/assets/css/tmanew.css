@@ -71,7 +71,9 @@
     width: 150px;
     font-size: 14px;
     font-weight: 500;
-  
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
     color: #2e2e2e;
     background-color: white;
 }

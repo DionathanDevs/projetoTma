@@ -35,12 +35,18 @@ unset($_SESSION['idUser']);
                 </div>
                 <button type="submit" class="login-btn">Entrar</button>
                 <?php 
-                if(isset($_GET['error'])) { ?>
+                if(isset($_GET['error1'])) { ?>
                 <div class="alert-error">
                     <strong>Atenção!</strong> Preencha todos os campos.
                     
                 </div><?php 
                 }
+                if(isset($_GET['error2'])) { ?>
+                    <div class="alert-error">
+                        Dados incorretos! Por favor tente novamente.
+                        
+                    </div><?php 
+                    }
                 ?>
                 <a href="#" class="esqueci-senha">Esqueci <b>minha senha</b></a>
             </form> 
