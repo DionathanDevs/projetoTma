@@ -5,14 +5,14 @@ require_once("./classes/TorreAnenometricaClass.php");
 $tmaClass = new TorreAnenometrica();
 $dataTma = $tmaClass->getAll();
 
+
 ?>
-
-<?php echo isset($_GET['sucess']) ?  "<div class='alert_sucess'><p>Dados atualizados com sucesso!</p></div>" : "" ;?>
-
 
 
 <h2 class="titulo-pagina"><span><i class="bi bi-broadcast-pin"></i></span>TMA > DataLoggers</h2>
 
+
+<?php echo isset($_GET['sucess']) ?  "<div id='alert_sucess' class='alert_sucess'><p>Dados atualizados com sucesso!</p></div>" : "" ;?>
 <table>
 <div class="box-btn-add">
     <a href="index.php?pg=tma&action=new" class="btn-add">Adicionar  <i class="bi bi-plus-lg"></i></a>

@@ -44,6 +44,13 @@
 }
 
 .alert_sucess{
+    position: fixed;
+    top: 70px;
+    left: 90%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    opacity: 1;
+    display: flex;
     color: rgb(18, 158, 30);
     background-color: rgba(57, 172, 29, 0.116);
     border: 1px solid rgba(23, 165, 42, 0.356);
