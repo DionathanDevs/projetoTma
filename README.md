@@ -9,22 +9,6 @@ Este sistema foi desenvolvido para gerenciar informações de torres anenométri
 - HTML/CSS (para a interface, se aplicável)
 - JavaScript (se houver interatividade no frontend)
 
-## Estrutura do Projeto
-```
-/
-├── config/
-│   ├── conexao.php  # Arquivo de conexão com o banco de dados
-│
-├── classes/
-│   ├── TorreAnenometricaClass.php  # Classe responsável pela manipulação de dados da torre anenométrica
-│
-├── public/
-│   ├── index.php  # Página inicial
-│   ├── tmasalvar.php  # Script para salvar/atualizar os dados da torre anenométrica
-│
-├── README.md  # Documentação do projeto
-```
-
 ## Configuração do Banco de Dados
 Crie a tabela `tma` no MySQL com a seguinte estrutura:
 ```sql
