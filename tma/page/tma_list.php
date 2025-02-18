@@ -93,7 +93,7 @@ $dataTma = $tmaClass->getAll();
                         <div class="input-field">
 
                         <label for="field1">TMA</label>
-                        <input type="text" id="field1" name="name" value="<?php echo $item['name']; ?>" class="input-info">
+                        <input type="text" id="field1" name="name" required value="<?php echo $item['name']; ?>" class="input-info">
 
                         </div>
                         <div class="input-field">
@@ -134,8 +134,8 @@ $dataTma = $tmaClass->getAll();
                         </div>
                         <div class="input-field">
 
-                        <label for="field9">Gateway</label>
-                        <input type="text" id="field9" name="datalog_ip" value="<?php echo $item['datalog_ip']; ?>">
+                        <label for="field9">Ip</label>
+                        <input type="text" id="field9" name="datalog_ip" required value="<?php echo $item['datalog_ip']; ?>">
 
                         </div>
                         <div class="input-field">

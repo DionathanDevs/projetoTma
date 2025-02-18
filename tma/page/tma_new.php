@@ -19,7 +19,7 @@
                         <div class="input-field">
 
                             <label>Tma</label>
-                            <input type="text" id="name" name="name">
+                            <input type="text" id="name" name="name" required>
 
                         </div>
                         <div class="input-field">
@@ -61,7 +61,7 @@
                         <div class="input-field">
 
                             <label>Ip</label>
-                            <input type="text" id="datalog_ip" name="datalog_ip">
+                            <input type="text" id="datalog_ip" name="datalog_ip" required>
 
                         </div>
                         <div class="input-field">
