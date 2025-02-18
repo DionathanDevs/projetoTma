@@ -33,7 +33,7 @@ CREATE TABLE tma (
 ## Configuração do Projeto
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/DionathanDevs/projetoTma.git
    ```
 2. Configure o banco de dados em `config/conexao.php`.
 3. Certifique-se de que seu servidor Apache + MySQL (XAMPP, WAMP ou similar) está rodando.
